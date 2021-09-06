@@ -15,11 +15,13 @@ mv ./kube/do-sample-deployment.yml.out ./kube/do-sample-deployment.yml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > cert.crt
 
+echo "---------------- KUBERNETES CLUSTER CERTIFICATE"
 cat cert.crt
 
-echo "----------------"
+echo "---------------- KUBERNETES SERVER "
 echo "$KUBERNETES_SERVER"
-echo "----------------"
+
+echo "---------------- KUBERNETES TOKEN"
 
 
 echo "$KUBERNETES_TOKEN"
