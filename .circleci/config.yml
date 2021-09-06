@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ragnaroek/kcov:v33
+      - image: circleci/buildpack-deps:stretch
     environment:
       IMAGE_NAME: mirak/do-kubernetes-sample-app
     working_directory: ~/app
