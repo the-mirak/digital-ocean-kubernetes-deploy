@@ -26,6 +26,9 @@ echo "---------------- KUBERNETES TOKEN"
 
 echo "$KUBERNETES_TOKEN"
 
+curl --cacert ${KUBERNETES_CLUSTER_CERTIFICATE} --header "Authorization: Bearer ${TOKEN}" -X GET ${KUBERNETES_SERVER}/api
+
+
 ./kubectl \
   --kubeconfig=/dev/null \
   --server=$KUBERNETES_SERVER \
