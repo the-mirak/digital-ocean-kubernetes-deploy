@@ -14,11 +14,15 @@ envsubst <./kube/do-sample-deployment.yml >./kube/do-sample-deployment.yml.out
 mv ./kube/do-sample-deployment.yml.out ./kube/do-sample-deployment.yml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > cert.crt
+
 cat cert.crt
 
-echo $KUBERNETES_SERVER
+echo "----------------"
+echo "$KUBERNETES_SERVER"
+echo "----------------"
 
-echo $KUBERNETES_TOKEN
+
+echo "$KUBERNETES_TOKEN"
 
 ./kubectl \
   --kubeconfig=/dev/null \
